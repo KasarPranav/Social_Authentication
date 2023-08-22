@@ -1,0 +1,38 @@
+<div class="container-lg h-100 d-flex flex-column justify-content-center align-items-center">
+    <h1 style="color: rgb(42, 42, 174);">Social.com</h1>
+    <div class="card text-bg-light mb-3" style="min-width: 24rem;">
+        <div class="card-body">
+            
+            <h5 class="card-title" style="text-align: center;">log in to Social.com</h5>
+            <form action="/authentication/sign-in/check" method="POST">
+                <div class="row mt-4">
+                    <div class="col">
+                        <input type="email" class="form-control" required name="email" placeholder="Email" aria-label="email" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <input type="password" class="form-control" required name="password" placeholder="Password" aria-label="password" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <button type="submit" class="w-100 btn btn-primary btn-md btn-block"><h5>Log In</h5></button>
+                    </div>
+                </div>    
+                <div class="row mt-2 mb-4" style="text-align: center;">
+                    <div class="col nav-item d-flex justify-content-center">
+                        <a  class="me-2 nav-link active link-primary" href="/forgotPasswordPage"><small>Forgotten account?</small></a>
+                        <a class="nav-link active link-primary" href="/authentication/sign-up/page"><small>Sign up for Social.com</small></a>
+                    </div> 
+                </div> 
+                <div class="row mt-2 mb-4" style="text-align: center;">
+                    <div class="col nav-item d-flex justify-content-center">
+                        <a  class="me-2 nav-link active link-primary" href="/authentication/auth/google"><small>Sign In with google</small></a>
+                    </div> 
+                </div>                   
+            </form>                 
+        </div>   
+    </div>
+  
+</div>
