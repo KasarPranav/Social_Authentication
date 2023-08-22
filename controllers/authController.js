@@ -2,7 +2,7 @@ const userModel = require('../models/users');
 const resetModel = require('../models/resetPassword')
 const jwt = require('jsonwebtoken');
 const catchAsync = require('../utils/catchAsyncError');
-const AppError = require('../utils/errorClass');
+// const AppError = require('../utils/errorClass');
 require('dotenv').config();
 const crypto = require('crypto');
 const createMail = require('../utils/email');
