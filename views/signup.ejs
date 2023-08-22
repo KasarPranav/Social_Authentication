@@ -1,0 +1,107 @@
+<div class="container-lg h-100 d-flex flex-column justify-content-center align-items-center">
+    <h1 style="color: rgb(42, 42, 174);">Social.com</h1>
+    <div class="card text-bg-light mb-3" style="max-width: 28rem;">
+        <div class="card-header" style="text-align: center;">
+            <span><h3>Create a new account</h3></span> 
+            <span><p class="text-secondary">It's quick and easy</p></span>
+        </div>
+        <div class="card-body">              
+            <form action="/authentication/sign-up/create" method="POST" class="container">
+                <div class="row pb-2">
+                  <div class="col">
+                    <input type="text" class="form-control" required name="firstName" placeholder="First name" aria-label="firstName" aria-describedby="addon-wrapping">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" required name="surname" placeholder="Surname" aria-label="surname" aria-describedby="addon-wrapping">
+                  </div>                
+                </div>
+                <div class="row pb-2">
+                    <div class="col">
+                        <input type="email" class="form-control" name="email" required placeholder="Email" aria-label="email" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col">
+                        <input type="password" class="form-control" name="password" required placeholder="New Password" aria-label="password" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col ms-1 small text-secondary">
+                        <span>Date of birth</span>
+                    </div>                    
+                </div>
+                <div class="row pb-2">
+                    <div class="col">
+                        <select class="form-select" name="day" required >
+                            <%for(let i=1; i<=31;i++){%>
+                                <option value=<%=i%>><%=i%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="month" required >
+                            <%for(let i=0; i<months.length;i++){%>
+                                <option value=<%=i%>><%=months[i]%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                    <div class="col pb-2">
+                        <select class="form-select" name="year" required >
+                            <%for(let i=2023; i>=1905;i--){%>
+                                <option value=<%=i%>><%=i%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col ms-1 small text-secondary">
+                            <span>Gender</span>
+                        </div>                    
+                    </div>
+                    <div class="row">
+                        <div class="col ms-1">
+                            <input class="form-check-input" type="radio" name="gender" id="gender" value="Male" required>
+                            <label class="form-check-label" for="gender">
+                                Male
+                            </label>                            
+                        </div>
+                        <div class="col">
+                            <input class="form-check-input" type="radio" name="gender" id="gender" value="Female" required>
+                            <label class="form-check-label" for="gender">
+                                Female
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input class="form-check-input" type="radio" name="gender" id="gender" value="Others" required>
+                            <label class="form-check-label" for="gender">
+                                Others
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row mt-2 small text-secondary">
+                        <small style="text-align: justify;">
+                            People who use our service may have uploaded your contact information to Social. Learn more.
+                        </small>
+                    </div>
+                    <div class="row mt-2 small text-secondary">
+                        <small style="text-align: justify;">
+                            By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.
+                        </small>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-center">
+                        <div class="col">
+                            <button type="submit" class="btn btn-success btn-sm btn-block"><h5> Sign Up</h5></button>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col nav-item">
+                            <a class="nav-link active link-primary" href="/authentication/sign-in/page">Already have an account?</a>
+                        </div>                       
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    
+    </div>
+  
+</div>
