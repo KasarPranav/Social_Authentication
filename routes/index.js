@@ -7,7 +7,7 @@ routers.use(customMiddleware.setUserOnLocals);
 routers.use('/authentication',require('./authentication'));
 
 // Protected route via session based authentication
-routers.use('/home',customMiddleware.checkAuthorization,authController.homePage);
+routers.use('/',customMiddleware.checkAuthorization,authController.homePage);
 
 // Protected route via jwt token
 routers.get('/profile',customMiddleware.protect,authController.profile);

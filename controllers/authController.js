@@ -27,7 +27,7 @@ module.exports.signin = catchAsync(async function (req, res, next) {
         // const token = createToken(user.id);
         // console.log("***TOKEN-",token);
         req.flash('success',"Sign In successfull!");
-        return res.redirect('/home');
+        return res.redirect('/');
     }
     req.flash('error',"Wrong Username or Password!");
     // return next(new AppError(404,'User doesnt Exists. Wrong Username or password!'));
@@ -58,7 +58,7 @@ module.exports.signup = catchAsync(async function (req, res, next) {
 
 module.exports.checkIfAlreadyAuthenticated = function(req,res,next){
     if((req.session && req.session.authorized===true)){
-        return res.redirect('/home');
+        return res.redirect('/');
     }
     return next();  
 }
